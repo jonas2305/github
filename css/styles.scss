@@ -1,3 +1,48 @@
+
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+
+@font-face {
+  font-family: 'Marlboro';
+  src:  url('../fonts/marlboro-webfont.woff'),
+        url('../fonts/marlboro-webfont.woff2');
+}
+
 body{
-  background-color: green;
+  margin: 3%;
+}
+
+.art1{
+  font-family: Arial,Tahoma,sans-serif;
+}
+
+.art2{
+  font-family: "Slabo 27px",sans-serif;
+}
+
+.art3{
+  font-family: "Marlboro";
+}
+
+@supports (grid-area: auto) {
+
+  @media screen and (min-width: 800px) {
+
+    body{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas:  "art1 art2 art3";
+      grid-column-gap: 2%;
+    }
+    .art1{
+      grid-area: art1;
+    }
+    .art2{
+      grid-area: art2;
+    }
+    .art3{
+      grid-area: art3;
+    }
+
+    
+  }
 }
